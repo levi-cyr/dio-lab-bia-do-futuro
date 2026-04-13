@@ -1,11 +1,11 @@
 data,descricao,categoria,valor,tipo
-2025-10-01,Salário,receita,5000.00,entrada
-2025-10-02,Aluguel,moradia,1200.00,saida
-2025-10-03,Supermercado,alimentacao,450.00,saida
-2025-10-05,Netflix,lazer,55.90,saida
-2025-10-07,Farmácia,saude,89.00,saida
-2025-10-10,Restaurante,alimentacao,120.00,saida
-2025-10-12,Uber,transporte,45.00,saida
-2025-10-15,Conta de Luz,moradia,180.00,saida
-2025-10-20,Academia,saude,99.00,saida
-2025-10-25,Combustível,transporte,250.00,saida
+2026-02-05,Salário,receita,3000.00,entrada
+2026-02-10,Aluguel,moradia,800.00,saida
+2026-02-15,Supermercado,alimentacao,450.00,saida
+2026-02-20,Netflix,lazer,55.90,saida
+2026-02-21,Farmácia,saude,76.50,saida
+2026-02-23,Uber,transporte,45.00,saida
+2026-02-23,Restaurante,alimentacao,80.00,saida
+2026-02-25,Conta de Luz,moradia,120.00,saida
+2026-02-25,Academia,saude,99.00,saida
+2026-02-30,Conta de água, moradia,80.00,saida
