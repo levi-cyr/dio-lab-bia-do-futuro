@@ -6,10 +6,10 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
+| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para ter um atendimento continuo em diversas sessões |
 | `perfil_investidor.json` | JSON | Personalizar recomendações |
 | `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente para dar as dicas de organização |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -20,7 +20,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Adaptei os dados ao meu uso modificando eles para dados que fiquem dentro do meu controle e familiaridade. Retirei as informações do CDB e tesouro selic para focar menos em investimentos e mais na organização pessoal. O perfil do investidor foi modificado para ficar um salário ajustado com o que alterei nas transações, que apenas fiz um ajuste de preços e datas.
 
 ---
 
