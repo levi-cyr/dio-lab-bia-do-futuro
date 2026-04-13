@@ -4,40 +4,38 @@
 
 ### Problema
 > Qual problema financeiro seu agente resolve?
-
-[Sua descrição aqui]
+Organização com gastos. O agente responde dúvidas sobre o quanto você gastou no mês (com os dados que você mesmo fornece), se você está na margem de gastar mais ou menos, etc.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
-
-[Sua descrição aqui]
+Com dados fornecidos, ajuda as pessoas a terem noções de seus gastos, facilitando o manuseio do dinheiro
 
 ### Público-Alvo
 > Quem vai usar esse agente?
-
-[Sua descrição aqui]
+Jovens adultos e pessoas que estão com interesse em ter um controle de gastos.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Caldinhas
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
-
-[Sua descrição aqui]
+- Direto
+- Descontraído
+- Amigável
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
-
-[Sua descrição aqui]
+- Informal
+- Acessível
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: [ex: "Opa! Sou Lucas, mas pode me chamar de Caldinhas.omo posso ajudar com suas finanças hoje?"]
+- Confirmação: [ex: "Saquei! Deixa que eu vejo isso para você."]
+- Erro/Limitação: [ex: "Ixe, sei não, mas posso ajudar com..."]
 
 ---
 
@@ -59,10 +57,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Chatbot em Streamlit] |
+| LLM | [Gemini via API] |
+| Base de Conhecimento | [JSON/CSV com dados do cliente] |
+| Validação | [Checagem de alucinações] |
 
 ---
 
@@ -78,4 +76,5 @@ flowchart TD
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Não dá dicas de investimentos
+- Não responde 
