@@ -28,8 +28,38 @@ Adaptei os dados ao meu uso modificando eles para dados que fiquem dentro do meu
 
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
+```csharp
+using CsvHelper; //biblioteca para ler os CSV (instale no terminal com o comando: dotnet add package CsvHelper)
+using System.Globalization;
+using System.Text.Json;
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+namespace Loader;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        using var ReaderHistorico = new StreamReader("data/historico_atendimento.csv"); //passa e "lê" o arquivo csv e salva as informações
+        using var CsvHistorico = new CsvReader(ReaderHistorico, CultureInfo.InvariantCulture); //com os dados gerados ele lê o arquivo respeitando o padrao universal
+
+        var Historico = CsvHistorico.GetRecords<dynamic>().ToList(); //pega o historico_atendimentos.csv e adiciona em uma lista de forma dinamica (adicinoa enquanto tiver no arquivo)
+
+        using var ReaderTransacoes = new StreamReader("data/transacoes.csv");
+        using var CsvTransacoes = new CsvReader(ReaderTransacoes, CultureInfo.InvariantCulture);
+        var Transacoes = CsvTransacoes.GetRecords<dynamic>().ToList();
+
+        string JsonPerfil = File.ReadAllText("data/perfil_investidor.json"); //lê tudo que tá no arquivo json
+        var Perfil = JsonSerializer.Deserialize<dynamic>(JsonPerfil); //deserializa tudo que a string JsonPerfil leu anteriormente e joga em uma nova variavel
+
+        string JsonProdutos = File.ReadAllText("data/perfil_investidor.json");
+        var produtos = JsonSerializer.Deserialize<dynamic>(JsonProdutos);
+
+        Console.WriteLine("Dados carregados com sucesso!");
+    }
+}
+
+```
+[Os JSON/CSV são carregados no início da sessão e já ficão salvos na memória para uso do prompt]
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
