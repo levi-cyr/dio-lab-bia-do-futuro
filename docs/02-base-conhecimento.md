@@ -64,22 +64,37 @@ class Program
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Historico de atendimento:
+- Data: 2026-02-15
+- Canal: Chat
+- Tema: Gastos
+- Resumo: Cliente perguntou sobre gastos do mês
+- Resolvido: sim
+
+Perfil do Investidor:
+- Nome: Levi
+- Idade: 27
+- Profissao: Analista de Sistemas
+- Renda mensal: R$ 4500.00
+- Perfil investidor: Moderado
+- Objetivo principal: Construir reserva de emergência
+- Patrimonio_total: R$ 8000.00
+- Reserva_emergencia_atual: R$ 5000.00
+- Aceita risco: false
+
+Produtos Financeiros:
+- Nome: Tesouro Selic
+- Categoria: Renda fixa
+- Risco: baixo
+- Rentabilidade: 100% da Selic
+- Aporte minimo: 30.00
+- Indicado para: "eserva de emergência e iniciantes
+
+Transações:
+- Data: 2026-02-05
+- Descricao: Salario
+- Categoria: receita
+- Valor: R$ 3000.00
+- Tipo: entrada
 
 ---
-
-## Exemplo de Contexto Montado
-
-> Mostre um exemplo de como os dados são formatados para o agente.
-
-```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
-
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
-```
