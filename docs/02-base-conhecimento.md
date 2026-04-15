@@ -64,14 +64,14 @@ class Program
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-Historico de atendimento:
+Historico de atendimento (data/historico_atendimento.csv):
 - Data: 2026-02-15
 - Canal: Chat
 - Tema: Gastos
 - Resumo: Cliente perguntou sobre gastos do mês
 - Resolvido: sim
 
-Perfil do Investidor:
+Perfil do Investidor (data/perfil_investidor.json):
 - Nome: Levi
 - Idade: 27
 - Profissao: Analista de Sistemas
@@ -82,7 +82,7 @@ Perfil do Investidor:
 - Reserva_emergencia_atual: R$ 5000.00
 - Aceita risco: false
 
-Produtos Financeiros:
+Produtos Financeiros (data/produtos_financeiros.json):
 - Nome: Tesouro Selic
 - Categoria: Renda fixa
 - Risco: baixo
@@ -90,7 +90,7 @@ Produtos Financeiros:
 - Aporte minimo: 30.00
 - Indicado para: "eserva de emergência e iniciantes
 
-Transações:
+Transações (data/transacoes.csv):
 - Data: 2026-02-05
 - Descricao: Salario
 - Categoria: receita
