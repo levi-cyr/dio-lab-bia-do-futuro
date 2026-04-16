@@ -51,7 +51,7 @@ class Program
         string JsonPerfil = File.ReadAllText("data/perfil_investidor.json"); //lê tudo que tá no arquivo json
         var Perfil = JsonSerializer.Deserialize<dynamic>(JsonPerfil); //deserializa tudo que a string JsonPerfil leu anteriormente e joga em uma nova variavel
 
-        string JsonProdutos = File.ReadAllText("data/perfil_investidor.json");
+        string JsonProdutos = File.ReadAllText("data/produtos_financeiros.json");
         var produtos = JsonSerializer.Deserialize<dynamic>(JsonProdutos);
 
         Console.WriteLine("Dados carregados com sucesso!");
