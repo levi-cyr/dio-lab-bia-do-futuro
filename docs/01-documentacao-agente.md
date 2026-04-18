@@ -57,8 +57,8 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [Chatbot em Streamlit] |
-| LLM | [Gemini via API] |
+| Interface | [Chatbot em Console de terminal] |
+| LLM | [Ollama] |
 | Base de Conhecimento | [JSON/CSV com dados do cliente] |
 | Validação | [Checagem de alucinações] |
 
