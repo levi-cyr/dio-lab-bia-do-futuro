@@ -25,3 +25,6 @@ ollama serve
 # 2. Rode o programa (atenção, aqui vai depender de seu compilador, utilizo o vscode. Fique de olho na pasta que você está para executar o programa)
 dotnet run
 ```
+# Código rodando
+<img width="1849" height="854" alt="image" src="https://github.com/user-attachments/assets/4d4f1423-a0b1-455e-b49d-a0d610e8d92d" />
+
