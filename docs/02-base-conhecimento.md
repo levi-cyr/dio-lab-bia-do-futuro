@@ -66,7 +66,7 @@ namespace ChatbotCaldinhas
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-> Os dados são consultados dinamicamente no prompt, abaixo tem o exemplo de como eles são mostrados (é ilustrativo, pois é preciso deserializar o Json e depois passar novamente, então ficaria mais ou menos igual aos dados iniciais do arquivo JSON)
+> Os dados são consultados dinamicamente no prompt, a LLM lê os arquivos da data (JSON e CSV) como texto, abaixo tem o exemplo de como eles são mostrados para a IA
 
 Historico de atendimento (data/historico_atendimento.csv):
 - Data: 2026-02-15
