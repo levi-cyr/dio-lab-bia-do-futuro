@@ -1,0 +1,14 @@
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).AssemblyInfo.cs
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\bin\Debug\net10.0\Chatbot (Caldinhas).exe
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\bin\Debug\net10.0\Chatbot (Caldinhas).deps.json
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\bin\Debug\net10.0\Chatbot (Caldinhas).runtimeconfig.json
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\bin\Debug\net10.0\Chatbot (Caldinhas).dll
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\bin\Debug\net10.0\Chatbot (Caldinhas).pdb
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).dll
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\refint\Chatbot (Caldinhas).dll
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).pdb
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\Chatbot (Caldinhas).genruntimeconfig.cache
+C:\Users\Usuario\Documents\Programação\C#\Chatbot (Caldinhas)\obj\Debug\net10.0\ref\Chatbot (Caldinhas).dll
