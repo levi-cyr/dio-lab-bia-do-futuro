@@ -8,7 +8,6 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 |---------|---------|---------------------|
 | `historico_atendimento.csv` | CSV | Contextualizar interações anteriores para ter um atendimento continuo em diversas sessões |
 | `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente para dar as dicas de organização |
 
 > [!TIP]
@@ -29,35 +28,38 @@ Adaptei os dados ao meu uso modificando eles para dados que fiquem dentro do meu
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 ```csharp
-using CsvHelper; //biblioteca para ler os CSV (instale no terminal com o comando: dotnet add package CsvHelper)
-using System.Globalization;
-using System.Text.Json;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
-namespace Loader;
-
-class Program
+namespace ChatbotCaldinhas
 {
-    static void Main(string[] args)
+    class Loader
     {
-        using var ReaderHistorico = new StreamReader("data/historico_atendimento.csv"); //passa e "lê" o arquivo csv e salva as informações
-        using var CsvHistorico = new CsvReader(ReaderHistorico, CultureInfo.InvariantCulture); //com os dados gerados ele lê o arquivo respeitando o padrao universal
+        static async Task Main(string[] args)
+        {
+            //onde a pasta data vai estar
+            string basePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data");
 
-        var Historico = CsvHistorico.GetRecords<dynamic>().ToList(); //pega o historico_atendimentos.csv e adiciona em uma lista de forma dinamica (adicinoa enquanto tiver no arquivo)
+            //vai ler os arquivos
+            string perfilInvestidor = "";
+            string transacoes = "";
+            string historico = "";
 
-        using var ReaderTransacoes = new StreamReader("data/transacoes.csv");
-        using var CsvTransacoes = new CsvReader(ReaderTransacoes, CultureInfo.InvariantCulture);
-        var Transacoes = CsvTransacoes.GetRecords<dynamic>().ToList();
-
-        string JsonPerfil = File.ReadAllText("data/perfil_investidor.json"); //lê tudo que tá no arquivo json
-        var Perfil = JsonSerializer.Deserialize<dynamic>(JsonPerfil); //deserializa tudo que a string JsonPerfil leu anteriormente e joga em uma nova variavel
-
-        string JsonProdutos = File.ReadAllText("data/produtos_financeiros.json");
-        var produtos = JsonSerializer.Deserialize<dynamic>(JsonProdutos);
-
-        Console.WriteLine("Dados carregados com sucesso!");
+            try
+            {
+                perfilInvestidor = await File.ReadAllTextAsync(Path.Combine(basePath, "perfil_investidor.json"));
+                transacoes = await File.ReadAllTextAsync(Path.Combine(basePath, "transacoes.csv"));
+                historico = await File.ReadAllTextAsync(Path.Combine(basePath, "historico_atendimento.csv"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao ler os arquivos de contexto: {ex.Message}"); //se der ruim ele da erro e mostra qual seria
+                return;
+            }
+        }
     }
 }
-
 ```
 [Os JSON/CSV são carregados no início da sessão e já ficão salvos na memória para uso do prompt]
 
@@ -83,14 +85,6 @@ Perfil do Investidor (data/perfil_investidor.json):
 - Patrimonio_total: R$ 8000.00
 - Reserva_emergencia_atual: R$ 5000.00
 - Aceita risco: false
-
-Produtos Financeiros (data/produtos_financeiros.json):
-- Nome: Tesouro Selic
-- Categoria: Renda fixa
-- Risco: baixo
-- Rentabilidade: 100% da Selic
-- Aporte minimo: 30.00
-- Indicado para: "eserva de emergência e iniciantes
 
 Transações (data/transacoes.csv):
 - Data: 2026-02-05
